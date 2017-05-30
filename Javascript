@@ -1,0 +1,195 @@
+//Plan make ajax call for each streamer, no need to make it so complex
+var listOfStreamers=["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]; //array of streamers that stream for FCC
+//ajax call for streamer1
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[0], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43' //my unique client ID
+  },
+  dataType:"json", //specifies we get json data form api
+  success:function(data)//if the json call goes through execute code in bracket
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null) //If the stream is null...
+      {
+        $("#status1").html("Offline");  //status is offline
+        $("#playNow1").html("Offline");
+      }
+    else
+      {      
+        $("#status1").html("Online"); //if not null, they are online
+        $("#playNow1").html("Currently playing: "+data.stream.game);//tells us what game they are streaming/playing
+      }   
+  }
+});
+//ajax call for streamer2
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[1], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status2").html("Offline");
+        $("#playNow2").html("Offline");
+      }
+    else 
+      {      
+        $("#status2").html("Online");
+        $("#playNow2").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+//ajax call for streamer3
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[2], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status3").html("Offline");
+        $("#playNow3").html("Offline");
+      }
+    else 
+      {      
+        $("#status3").html("Online");
+        $("#playNow3").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+//ajax call for streamer4
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[3], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status4").html("Offline");
+        $("#playNow4").html("Offline");
+      }
+    else 
+      {      
+        $("#status4").html("Online");
+        $("#playNow4").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+//ajax call for streamer5
+
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[4], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status5").html("Offline");
+        $("#playNow5").html("Offline");
+      }
+    else
+      {      
+        $("#status5").html("Online");
+        $("#playNow5").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+//ajax call for streamer6
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[5], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status6").html("Offline");
+        $("#playNow6").html("Offline");
+      }
+    else
+      {      
+        $("#status6").html("Online");
+        $("#playNow6").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+  //ajax call for streamer 7
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[6], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+   // console.log(data);
+    if(data.stream===null)
+      {
+        $("#status7").html("Offline");
+        $("#playNow7").html("Offline");
+      }
+    else
+      {      
+        $("#status7").html("Online");
+        $("#playNow7").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
+  //ajax call for streamer 8
+$.ajax({
+  type:"GET",
+  url:"https://api.twitch.tv/kraken/streams/"+listOfStreamers[7], //last part of url is channel name inact for loop
+  headers:{
+    'Client-ID':'cdap5ux4k5aonkg76vmtlprruxyq43'
+  },
+  dataType:"json",
+  success:function(data)
+  {
+    //console.log(data.stream.stream_type);
+    //console.log(data);
+    if(data.stream===null)
+      {
+        $("#status8").html("Offline");
+        $("#playNow8").html("Offline");
+      }
+    else
+      {      
+        $("#status8").html("Online");
+        $("#playNow8").html("Currently playing: "+data.stream.game);
+      }   
+  }
+});
